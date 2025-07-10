@@ -462,12 +462,12 @@ def main_calendar():
         'JNJ', 'XOM', 'PG', 'MA', 'HD',
         'BAC', 'LLY', 'KO', 'PFE', 'PEP'
     ]
-    filter_input = st.text_input("Filter only few companies (e.g., AAPL, NVDA, ...)", "")
-    filtered_input = [t.strip().upper() for t in filter_input.replace(",", " ").split() if t.strip()]
-    filtered_tickers = [t for t in filtered_input if t in default_top_20] if filtered_input else default_top_20
+    # filter_input = st.text_input("Filter only few companies (e.g., AAPL, NVDA, ...)", "")
+    # filtered_input = [t.strip().upper() for t in filter_input.replace(",", " ").split() if t.strip()]
+    # filtered_tickers = [t for t in filtered_input if t in default_top_20] if filtered_input else default_top_20
     custom_input = st.text_input("Add new yfinance tickers (e.g., NFLX, ABNB, ...)", "")
     custom_tickers = [t.strip().upper() for t in custom_input.split(",") if t.strip()] if custom_input else []
-    tickers = list(set(filtered_tickers + custom_tickers))
+    tickers = list(set(default_top_20 + custom_tickers))
     if not tickers:
         st.warning("Please enter at least one valid ticker.")
         return
