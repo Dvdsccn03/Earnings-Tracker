@@ -402,7 +402,7 @@ if ticker:
         summary_prompt = (
     "You are a long/short equity hedge-fund manager. Produce a plain-ASCII executive summary of the attached SEC filing, obeying these exact rules:\n"
     "Write 4 detailed paragraphs, each with a single bullet point:\n"
-    "1. Key Financial Metrics: write only in plain-ASCII a paragraph highlighting at least 5 key financial metrics with comparizon to previous quarter or year (with % changes).\n"
+    "1. Key Financial Metrics: write only in plain-ASCII a paragraph highlighting at least 5 key financial metrics with comparizon to previous quarter or year (with % changes). Plain text, no special character.\n"
     "2. Trends: one concise paragraph on key trends.\n"
     "3. Risks: one concise paragraph on major risks.\n"
     "4. Opportunities: one concise paragraph on key opportunities.\n"
